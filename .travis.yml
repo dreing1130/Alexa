@@ -2,3 +2,12 @@ language: node_js
 node_js:
   - '4.3'
 script: node ./unittests.js
+deploy:
+  provider: lambda
+  function_name: "FactSkill"
+  region: "$${TRAVIS_BRANCH}_aws_region"
+  role: "arn:aws:iam::460862940163:role/service-role/Alexa"
+  runtime: "nodejs4.3"
+  handler_name: "handler"
+  access_key_id: "$${TRAVIS_BRANCH}_aws_access_key_id"
+  secret_access_key: "$${TRAVIS_BRANCH}_aws_secret_access_key"
