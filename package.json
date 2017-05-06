@@ -1,0 +1,9 @@
+{
+    "name": "travis-alexa",
+    "description": "Simple Travis-CI check",
+    "author": "David Reing",
+    "version": "0.0.1",
+    "scripts": {
+        "test": "node unittests.js"
+    }
+}
